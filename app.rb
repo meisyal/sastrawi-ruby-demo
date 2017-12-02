@@ -2,13 +2,13 @@ require 'sastrawi'
 require 'sinatra'
 
 get '/' do
-  erb :index
+  erb :index, :locals => {:result => "-"}
 end
 
 post '/' do
   stemming_result = stem(params['input'])
 
-  "Stemming result: #{stemming_result}"
+  erb :index, :locals => {:result => stemming_result}
 end
 
 def stem(text)
