@@ -1,6 +1,11 @@
 require 'sastrawi'
 require 'sinatra'
 
+before do
+  stemmer_factory = Sastrawi::Stemmer::StemmerFactory.new
+  @stemmer = stemmer_factory.create_stemmer
+end
+
 get '/' do
   erb :index, :locals => {:result => "-"}
 end
@@ -12,9 +17,7 @@ post '/' do
 end
 
 def stem(text)
-  stemmer_factory = Sastrawi::Stemmer::StemmerFactory.new
-  stemmer = stemmer_factory.create_stemmer
-  stemming_result = stemmer.stem(text)
+  stemming_result = @stemmer.stem(text)
 
   stemming_result
 end
