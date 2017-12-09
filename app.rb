@@ -7,13 +7,17 @@ before do
 end
 
 get '/' do
-  erb :index, :locals => {:result => "-"}
+  erb :index, :locals => {:result => "-", :time => "-"}
 end
 
 post '/' do
+  start_time = Time.now
   stemming_result = stem(params['input'])
+  end_time = Time.now
 
-  erb :index, :locals => {:result => stemming_result}
+  elapsed_time = end_time - start_time
+
+  erb :index, :locals => {:result => stemming_result, :time => elapsed_time}
 end
 
 def stem(text)
