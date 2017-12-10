@@ -12,12 +12,14 @@
       <input type="submit" value="Stem" />
       <input type="reset" value="Clear">
     </form>
-    <p>
-      Stemming result:<br /><%= result %>
-    </p>
-    <p>
-      This process took <%= time %> seconds.
-    </p>
+    <% if result %>
+      <p>
+        Stemming result:<br /><%= result %>
+      </p>
+      <p>
+        This process took <%= time %> seconds.
+      </p>
+    <% end %>
     <p>
       Copyright &copy; 2017, <a href="https://github.com/meisyal">meisyal</a>,
       All rights reserved.

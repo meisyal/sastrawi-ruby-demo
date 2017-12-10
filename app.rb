@@ -7,7 +7,7 @@ before do
 end
 
 get '/' do
-  erb :index, :locals => {:result => "-", :time => "-"}
+  erb :index, :locals => {:result => nil}
 end
 
 post '/' do
