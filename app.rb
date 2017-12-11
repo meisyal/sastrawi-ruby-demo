@@ -11,8 +11,10 @@ get '/' do
 end
 
 post '/' do
+  @text = params['input']
+
   start_time = Time.now
-  stemming_result = stem(params['input'])
+  stemming_result = stem(@text)
   end_time = Time.now
 
   elapsed_time = end_time - start_time
