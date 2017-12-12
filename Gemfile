@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'sinatra'
 gem 'sastrawi'
+gem 'sinatra'
+gem 'sinatra-contrib'
