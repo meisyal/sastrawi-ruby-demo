@@ -1,5 +1,6 @@
 require 'sastrawi'
 require 'sinatra'
+require 'sinatra/reloader' if development?
 
 before do
   stemmer_factory = Sastrawi::Stemmer::StemmerFactory.new
