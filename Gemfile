@@ -5,5 +5,5 @@ gem 'sinatra'
 gem 'sinatra-contrib'
 
 group :production do
-  gem "puma"
+  gem 'puma'
 end
