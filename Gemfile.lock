@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     backports (3.10.3)
+    erubis (2.7.0)
     multi_json (1.12.2)
     mustermann (1.0.1)
     puma (3.11.0)
@@ -27,6 +28,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  erubis
   puma
   sastrawi
   sinatra
