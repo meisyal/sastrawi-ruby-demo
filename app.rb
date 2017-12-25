@@ -2,6 +2,8 @@ require 'sastrawi'
 require 'sinatra'
 require 'sinatra/reloader' if development?
 
+set :erb, { escape_html: true }
+
 before do
   stemmer_factory = Sastrawi::Stemmer::StemmerFactory.new
   @stemmer = stemmer_factory.create_stemmer
