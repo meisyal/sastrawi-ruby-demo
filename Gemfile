@@ -7,6 +7,10 @@ gem 'sastrawi'
 gem 'sinatra'
 gem 'sinatra-contrib'
 
+group :test do
+  gem 'rack-test'
+end
+
 group :production do
   gem 'puma'
 end
