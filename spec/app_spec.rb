@@ -10,4 +10,14 @@ describe 'Sastrawi Ruby Demo' do
   def app
     Sinatra::Application
   end
+
+  describe '/' do
+    before do
+      get '/'
+    end
+
+    it "responds successfully" do
+      expect(last_response.status).to eq(200)
+    end
+  end
 end
