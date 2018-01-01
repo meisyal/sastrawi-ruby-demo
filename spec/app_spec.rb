@@ -12,12 +12,14 @@ describe 'Sastrawi Ruby Demo' do
   end
 
   describe '/' do
-    before do
-      get '/'
-    end
+    context 'with method GET' do
+      before do
+        get '/'
+      end
 
-    it "responds successfully" do
-      expect(last_response.status).to eq(200)
+      it 'responds successfully' do
+        expect(last_response.status).to eq(200)
+      end
     end
   end
 end
