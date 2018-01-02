@@ -21,5 +21,15 @@ describe 'Sastrawi Ruby Demo' do
         expect(last_response.status).to eq(200)
       end
     end
+
+    context 'with method POST' do
+      before do
+        post '/', {'input' => 'Perekonomian Indonesia sedang dalam pertumbuhan yang sangat membanggakan'}
+      end
+
+      it 'responds successfully' do
+        expect(last_response.status).to eq(200)
+      end
+    end
   end
 end
