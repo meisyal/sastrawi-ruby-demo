@@ -9,7 +9,7 @@ website. The demo website itself can be accessed at
 This demo website is released under the terms of MIT License. See the
 [LICENSE][license] file for more details.
 
-Copyright &copy; 2017 Andrias Meisyal.
+Copyright &copy; 2017-2018 Andrias Meisyal.
 
 [sastrawi-ruby]: https://github.com/meisyal/sastrawi-ruby
 [license]: https://github.com/meisyal/sastrawi-ruby-demo/blob/master/LICENSE.txt
