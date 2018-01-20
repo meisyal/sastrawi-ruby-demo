@@ -2,6 +2,8 @@ require 'sastrawi'
 require 'sinatra'
 require 'sinatra/reloader' if development?
 
+require_relative 'app_config'
+
 set :erb, { escape_html: true }
 
 before do
@@ -16,8 +18,8 @@ end
 post '/' do
   @text = params['input']
 
-  if @text.length > 3500
-    erb :index, :locals => {:result => "Text is too long, please download the offline version of sastrawi-ruby instead.", :time => nil}
+  if @text.length > MAX_TEXT_LONG_CHARACTER
+    erb :index, :locals => {:result => OFFLINE_VERSION_INFO, :time => nil}
   else
     start_time = Time.now
     stemming_result = stem(@text)
