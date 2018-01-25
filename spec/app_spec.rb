@@ -1,8 +1,9 @@
 ENV['RACK_ENV'] = 'test'
 
-require_relative '../app'
 require 'rspec'
 require 'rack/test'
+
+require_relative '../app'
 
 describe 'Sastrawi Ruby Demo' do
   include Rack::Test::Methods
@@ -28,6 +29,16 @@ describe 'Sastrawi Ruby Demo' do
       end
 
       it 'responds successfully' do
+        expect(last_response.status).to eq(200)
+      end
+
+      long_text = 'Teks ini sangat panjang'
+
+      before do
+        post '/', {'input' => long_text}
+      end
+
+      it 'responds to download the offline version off sastrawi-ruby' do
         expect(last_response.status).to eq(200)
       end
     end
