@@ -32,7 +32,7 @@ describe 'Sastrawi Ruby Demo' do
         expect(last_response.status).to eq(200)
       end
 
-      long_text = 'Teks ini sangat panjang'
+      long_text = 'Teks ini memiliki jumlah karakter lebih dari 2500'
 
       before do
         post '/', {'input' => long_text}
