@@ -10,7 +10,7 @@
     <form name="stemform" action="/" method="post">
       <textarea name="input" rows=8 cols=51 placeholder="e.g., Perekonomian Indonesia sedang dalam pertumbuhan yang membanggakan." autofocus required><%= @text %></textarea><br />
       <input type="submit" value="Stem" />
-      <input type="reset" value="Clear">
+      <input type="button" value="Clear" onclick="this.form.elements['input'].value=''" />
     </form>
     <% if result %>
       <p>
