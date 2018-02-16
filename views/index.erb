@@ -3,14 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <title>Sastrawi Ruby Demo</title>
+    <script>
+      function clearTextInput() {
+        document.getElementById('text').value = '';
+      }
+    </script>
   </head>
   <body>
     <h3>Sastrawi Ruby</h3>
     <p>Please enter your text here:</p>
     <form name="stemform" action="/" method="post">
-      <textarea name="input" rows=8 cols=51 placeholder="e.g., Perekonomian Indonesia sedang dalam pertumbuhan yang membanggakan." autofocus required><%= @text %></textarea><br />
+      <textarea name="input" id="text" rows=8 cols=51 placeholder="e.g., Perekonomian Indonesia sedang dalam pertumbuhan yang membanggakan." autofocus required><%= @text %></textarea><br />
       <input type="submit" value="Stem" />
-      <input type="button" value="Clear" onclick="this.form.elements['input'].value=''" />
+      <input type="button" value="Clear" onclick="clearTextInput()" />
     </form>
     <% if result %>
       <p>
