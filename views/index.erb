@@ -21,9 +21,11 @@
       <p>
         Stemming result:<br /><%= result %>
       </p>
-      <p>
-        This process took <%= time %> seconds.
-      </p>
+      <% if time %>
+        <p>
+          This process took <%= time %> seconds.
+        </p>
+      <% end %>
     <% end %>
     <p>
       Copyright &copy; 2017-2018, <a href="https://github.com/meisyal">meisyal</a>,
