@@ -3,6 +3,68 @@
   <head>
     <meta charset="UTF-8">
     <title>Sastrawi Ruby Demo</title>
+    <style type="text/css" media="screen">
+      body {
+        margin: 0 auto;
+        padding: 4rem 1rem;
+        max-width: 480px;
+        color: #555;
+        font-family: "Helvetica", "Arial", sans-serif;
+        line-height: 1.5;
+        background-color: #f2f2f2;
+      }
+      a {
+        color: #e81c4f;
+      }
+      textarea {
+        width: 100%;
+        margin: 0;
+        padding: .5rem;
+        box-sizing: border-box;
+      }
+      .title {
+        color: #333;
+      }
+      .footer {
+        margin-top: 3rem;
+        text-align: center;
+      }
+      .btn {
+        position: relative;
+        margin: 0 0 10px;
+        border: 0px solid;
+        border-bottom: 5px solid #c0392b;
+        padding: .6rem 3rem;
+        color: #FFF;
+        font-size: 1rem;
+        text-decoration: none;
+        background-color: #e74c3c;
+      }
+      .btn:active
+      {
+        border-bottom: none;
+        transform: translate(0,5px);
+      }
+      .btn--red {
+        border-bottom: 5px solid #c0392b;
+        background-color: #e74c3c;
+      }
+      .btn--green {
+        border-bottom: 5px solid #27ae60;
+        background-color: #2ecc71;
+      }
+      .btn--blue {
+        border-bottom: 5px solid #2980B9;
+        background-color: #3498db;
+      }
+      .btn--yellow {
+        border-bottom: 5px solid #f39c12;
+        background-color: #f1c40f;
+      }
+      .btn--small {
+        padding: .6rem 1em;
+      }
+    </style>
     <script>
       function clearTextInput() {
         document.getElementById('text').value = '';
@@ -10,26 +72,27 @@
     </script>
   </head>
   <body>
-    <h3>Sastrawi Ruby</h3>
+    <h3 class="title">Sastrawi Ruby</h3>
     <p>Please enter your text here:</p>
     <form name="stemform" action="/" method="post">
-      <textarea name="input" id="text" rows=8 cols=51 placeholder="e.g., Perekonomian Indonesia sedang dalam pertumbuhan yang membanggakan." autofocus required><%= @text %></textarea><br />
-      <input type="submit" value="Stem" />
-      <input type="button" value="Clear" onclick="clearTextInput()" />
+      <textarea name="input" id="text" rows=8 cols=51 placeholder="e.g., Perekonomian Indonesia sedang dalam pertumbuhan yang membanggakan." autofocus required><%= @text %></textarea>
+      <button type="button" class="btn btn--red btn--small" onclick="clearTextInput()">Clear</button>
+      <button type="submit" class="btn btn--blue">Stem</button>
     </form>
     <% if result %>
       <p>
         Stemming result:<br /><%= result %>
       </p>
       <% if time %>
-        <p>
+        <small>
           This process took <%= time %> seconds.
-        </p>
+        </small>
       <% end %>
     <% end %>
-    <p>
-      Copyright &copy; 2017-2018, <a href="https://github.com/meisyal">meisyal</a>,
-      All rights reserved.
-    </p>
+    <div class="footer">
+      <small>
+        Copyright &copy; 2017-2018, <a href="https://github.com/meisyal">meisyal</a>, All rights reserved.
+      </small>
+    </div>
   </body>
 </html>
