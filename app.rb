@@ -21,10 +21,9 @@ post '/' do
   if @text.length > MAX_TEXT_LONG_CHARACTER
     erb :index, :locals => {:result => OFFLINE_VERSION_INFO, :time => nil}
   else
-    start_time = Time.now
+    start_time = Process.clock_gettime(Process::CLOCK_MONOTONIC)
     stemming_result = stem(@text)
-    end_time = Time.now
-
+    end_time = Process.clock_gettime(Process::CLOCK_MONOTONIC)
     elapsed_time = end_time - start_time
 
     erb :index, :locals => {:result => stemming_result, :time => elapsed_time}
