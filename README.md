@@ -9,17 +9,17 @@ website. The demo website itself can be accessed at
 1. Make sure you have installed Ruby with Bundler on your local computer.
 2. Clone this repository.
 
-    $ git clone https://github.com/meisyal/sastrawi-ruby-demo.git
+   `$ git clone https://github.com/meisyal/sastrawi-ruby-demo.git`
 
 3. Install dependencies.
 
-    $ bundle install
+   `$ bundle install`
 
 4. Run the app.
 
-    ruby app.rb
+   `$ ruby app.rb`
 
-The application runs at https://localhost:4567.
+The application runs at <http://localhost:4567> by default.
 
 ## License
 
