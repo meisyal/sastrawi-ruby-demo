@@ -26,7 +26,7 @@ The application runs at <http://localhost:4567> by default.
 This demo website is released under the terms of MIT License. See the
 [LICENSE][license] file for more details.
 
-Copyright &copy; 2017-2019 Andrias Meisyal.
+Copyright &copy; 2017-2020 Andrias Meisyal.
 
 [sastrawi-ruby]: https://github.com/meisyal/sastrawi-ruby
 [license]: https://github.com/meisyal/sastrawi-ruby-demo/blob/master/LICENSE.txt
