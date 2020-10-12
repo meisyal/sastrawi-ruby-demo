@@ -11,7 +11,3 @@ group :test do
   gem 'rack-test'
   gem 'rspec'
 end
-
-group :production do
-  gem 'puma'
-end
